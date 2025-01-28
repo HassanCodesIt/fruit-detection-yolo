@@ -1,0 +1,66 @@
+
+# Dataset Information
+
+This project uses the Fruit Detection dataset from Kaggle, which contains a large collection of images from 6 different fruit classes. The dataset is specifically designed for training and evaluating fruit detection models using YOLOv8 format.
+
+You can access the dataset on Kaggle here: [Fruit Detection Dataset](https://www.kaggle.com/datasets/lakshaytyagi01/fruit-detection)
+
+## Dataset Overview
+- Total Images: 8,479 images.
+- Fruit Types: The dataset contains images of the following fruits:
+  - Apple
+  - Grapes
+  - Pineapple
+  - Orange
+  - Banana
+  - Watermelon
+- Dataset Split:
+  - Train Set: 84% (around 7,129 images)
+  - Validation Set: 11% (around 932 images)
+  - Test Set: 5% (around 418 images)
+- Image Format: JPEG
+- Image Resolution: Varies across the dataset.
+- Annotation Format: YOLOv8 format, where each image has an associated annotation file containing bounding box coordinates and class IDs.
+
+## Dataset Structure
+The dataset is organized as follows:
+
+```
+dataset/
+├── train/
+│   ├── images/        # Images for training
+│   ├── labels/        # Annotations for training (YOLOv8 format)
+│   └── data.yaml      # Dataset configuration for training
+├── valid/
+│   ├── images/        # Images for validation
+│   ├── labels/        # Annotations for validation
+├── test/
+│   ├── images/        # Images for testing
+│   ├── labels/        # Annotations for testing
+├── README.txt         # General information about the dataset
+├── cli.log            # Command line interface log
+└── yolov8s.pt         # Pretrained YOLOv8 model file (optional for transfer learning)
+```
+
+### Files and Directories
+- train: Contains the training images and annotations (YOLOv8 format).
+- valid: Contains the validation images and annotations (YOLOv8 format).
+- test: Contains the test images and annotations (YOLOv8 format).
+- README.txt: A file with general information about the dataset.
+- cli.log: Log file with command-line interface information.
+- data.yaml: Dataset configuration file that defines the paths to the images and classes.
+- yolov8s.pt: A pretrained YOLOv8 model file, which can be used for transfer learning.
+
+## Dataset Features
+- Number of Classes: 6 (Apple, Grapes, Pineapple, Orange, Banana, Watermelon)
+- Annotations: Each image has a corresponding .txt annotation file (in YOLOv8 format) that defines bounding box coordinates and class IDs for each fruit in the image.
+
+## Data Preprocessing
+The following preprocessing steps have been applied to the dataset:
+1. Image Resizing: Images are resized to a fixed size (e.g., 640x640) to fit the YOLO model input.
+2. Data Augmentation: Various augmentations, such as flipping, rotation, and scaling, were applied to enhance model robustness.
+3. Normalization: Image pixel values are normalized for better training convergence.
+
+## License
+The dataset is publicly available on Kaggle under a specific license. Please check the Kaggle page for more details.
+

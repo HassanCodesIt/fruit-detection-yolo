@@ -1,0 +1,11 @@
+train: C:/Users/hassa/.cache/kagglehub/datasets/lakshaytyagi01/fruit-detection/versions/1/Fruits-detection/train/images
+val: C:/Users/hassa/.cache/kagglehub/datasets/lakshaytyagi01/fruit-detection/versions/1/Fruits-detection/valid/images
+test: C:/Users/hassa/.cache/kagglehub/datasets/lakshaytyagi01/fruit-detection/versions/1/Fruits-detection/test/images
+nc: 6  # Number of classes
+names:
+  - Apple
+  - Banana
+  - Grape
+  - Orange
+  - Pineapple
+  - Watermelon
